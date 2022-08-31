@@ -63,12 +63,9 @@ public class UserRegistration {
 		}else
 			return "Sad";
 	}
-	public static String isEmailValidation(String email) {
+	public static boolean isEmailValidation(String email) {
 		Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?");
-		if(pattern.matcher(email).matches()){
-			return "Happy";
-		}else
-			return "Sad";
+		return pattern.matcher(email).matches();
 	}
 	/*
 	 * create a main method , all program execute in main method
