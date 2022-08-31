@@ -33,12 +33,16 @@ public class UserRegistration {
 		return pattern.matcher(password1).matches();
 	}
 	public static boolean isValidPassword2(String password2) {
-		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z0-9]{8,}$");
+		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z0-9]{7,}$");
 		return pattern.matcher(password2).matches();
 	}
 	public static boolean isValidPassword3(String password3) {
 		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z1-9]{6,}[1-9]$");
 		return pattern.matcher(password3).matches();
+	}
+	public static boolean isValidPassword4(String password4) {
+		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z1-9]{5,}[@$^][1-9]$");
+		return pattern.matcher(password4).matches();
 	}
 	/*
 	 * create a main method , all program execute in main method
@@ -52,5 +56,6 @@ public class UserRegistration {
 		System.out.println(isValidPassword1("javul121"));
 		System.out.println(isValidPassword2("Javul121"));
 		System.out.println(isValidPassword3("Javulmulla1"));
+		System.out.println(isValidPassword4("Javulm$1"));
 	}
 }
