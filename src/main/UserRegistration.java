@@ -44,11 +44,16 @@ public class UserRegistration {
 		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z1-9]{5,}[@$^][1-9]$");
 		return pattern.matcher(password4).matches();
 	}
+	public static boolean isEmailValidation(String email) {
+		Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?");
+		return pattern.matcher(email).matches();
+	}
 	/*
 	 * create a main method , all program execute in main method
 	 * @param args no arguments
 	 */
 	public static void main(String[] args) {
+//		printing boolean value whether pattern matches given info
 		System.out.println(isValidFirstName("Javul"));
 		System.out.println(isValidLastName("Mulla"));
 		System.out.println(isValidPhoneNo("91 9876543210"));
@@ -57,5 +62,6 @@ public class UserRegistration {
 		System.out.println(isValidPassword2("Javul121"));
 		System.out.println(isValidPassword3("Javulmulla1"));
 		System.out.println(isValidPassword4("Javulm$1"));
+		System.out.println(isEmailValidation("javulmulla123@yahoo.co.in"));
 	}
 }
