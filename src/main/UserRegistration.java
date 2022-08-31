@@ -2,10 +2,6 @@ package com.bridgelabz;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-/*	  create parameterised method name as isValidFirstname
-	  In this method function to validate the first name
-	  @param first name as string
-	  @return first name*/
 
 	public static String isValidFirstName(String firstName) {
 		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z0-9]{2,}$");
@@ -78,16 +74,8 @@ public class UserRegistration {
 	 * create a main method , all program execute in main method
 	 * @param args no arguments
 	 */
+
 	public static void main(String[] args) {
-//		printing boolean value whether pattern matches given info
-		System.out.println(isValidFirstName("Javul"));
-		System.out.println(isValidLastName("Mulla"));
-		System.out.println(isValidPhoneNo("91 9876543210"));
-		System.out.println(isValidEmail("javulmulla8@gmail.com"));
-		System.out.println(isValidPassword1("javul121"));
-		System.out.println(isValidPassword2("Javul121"));
-		System.out.println(isValidPassword3("Javulmulla1"));
-		System.out.println(isValidPassword4("Javulm$1"));
-		System.out.println(isEmailValidation("javulmulla123@yahoo.co.in"));
+
 	}
 }
