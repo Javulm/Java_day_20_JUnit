@@ -2,7 +2,7 @@ import com.bridgelabz.UserRegistration;
 import org.junit.Assert;
 import org.junit.Test;
 
-class UserRegistrationTest {
+public class UserRegistrationTest {
 	String result;
 	@Test
 	public void firstName_IsValid_PassTest() {
@@ -11,7 +11,7 @@ class UserRegistrationTest {
 	}
 	@Test
 	public void firstName_IsValid_FailTest() {
-		result = UserRegistration.isValidFirstName("Javul123j");
+		result = UserRegistration.isValidFirstName("Javul123");
 		Assert.assertEquals("Sad",result);
 	}
 
@@ -22,7 +22,7 @@ class UserRegistrationTest {
 	}
 	@Test
 	public void lastName_IsValid_FailTest() {
-		result = UserRegistration.isValidLastName("Mulla");
+		result = UserRegistration.isValidLastName("Mulla1");
 		Assert.assertEquals("Sad",result);
 	}
 
@@ -57,7 +57,7 @@ class UserRegistrationTest {
 	}
 	@Test
 	public void password_IsValid_FailTest1() {
-		result = UserRegistration.isValidPassword1("Javul121");
+		result = UserRegistration.isValidPassword1("javul");
 		Assert.assertEquals("Sad",result);
 	}
 

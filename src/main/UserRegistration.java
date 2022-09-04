@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
 	public static String isValidFirstName(String firstName) {
-		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z0-9]{2,}$");
+		Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z]{2,}$");
 /*		Regex to check valid username and compile the regex
 		Pattern class contains matcher() method to find matching between given username
 		and regular expression.*/
@@ -15,7 +15,7 @@ public class UserRegistration {
 //		Return happy if the firstname matched the Regex
 	}
 	public static String isValidLastName(String lastName) {
-		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z0-9]{2,}$");
+		Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z]{2,}$");
 		if(pattern.matcher(lastName).matches()){
 			return "Happy";
 		}else
@@ -43,21 +43,21 @@ public class UserRegistration {
 			return "Sad";
 	}
 	public static String isValidPassword2(String password2) {
-		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z0-9]{7,}$");
+		Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z0-9]{7,}$");
 		if(pattern.matcher(password2).matches()){
 			return "Happy";
 		}else
 			return "Sad";
 	}
 	public static String isValidPassword3(String password3) {
-		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z1-9]{6,}[1-9]$");
+		Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z1-9]{6,}[1-9]$");
 		if(pattern.matcher(password3).matches()){
 			return "Happy";
 		}else
 			return "Sad";
 	}
 	public static String isValidPassword4(String password4) {
-		Pattern pattern = Pattern.compile("^[A-Z][a-zA-z1-9]{5,}[@$^][1-9]$");
+		Pattern pattern = Pattern.compile("^[A-Z][a-zA-Z1-9]{5,}[@$^][1-9]+$");
 		if(pattern.matcher(password4).matches()){
 			return "Happy";
 		}else
