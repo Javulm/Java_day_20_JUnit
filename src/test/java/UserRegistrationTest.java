@@ -6,6 +6,9 @@ import org.junit.Test;
 public class UserRegistrationTest {
 	Boolean result;
 	@Test
+	public void givenLambdaExpressionShouldReturnTrue(){
+	}
+	@Test
 	public void givenFirstName_WhenProper_ShouldReturnTrue() {
 		result = UserRegistration.isValidFirstName("Javul");
 		Assert.assertEquals(true,result);
