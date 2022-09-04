@@ -1,8 +1,8 @@
 import com.bridgelabz.UserRegistration;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.testng.Assert;
 
 import java.util.Arrays;
 import java.util.Collection;
